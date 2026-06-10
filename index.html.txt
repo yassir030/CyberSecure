@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CyberSecure | Onkraakbare IT-Beveiliging voor het MKB</title>
+    <style>
+        /* CSS Reset & Basis Stijlen */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: #0b0f19;
+            color: #e2e8f0;
+            line-height: 1.6;
+        }
+
+        .container {
+            width: 85%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        /* Navigatiebalk */
+        header {
+            background-color: rgba(11, 15, 25, 0.9);
+            border-bottom: 1px solid #1e293b;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            backdrop-filter: blur(10px);
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 0;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: #00f2fe;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .logo span {
+            color: #4facfe;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 25px;
+        }
+
+        .nav-links a {
+            color: #94a3b8;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: #00f2fe;
+        }
+
+        /* Hero Sectie */
+        .hero {
+            padding: 100px 0 80px 0;
+            text-align: center;
+            background: radial-gradient(circle at top, #1e2640 0%, #0b0f19 70%);
+        }
+
+        .hero h1 {
+            font-size: 48px;
+            margin-bottom: 20px;
+            background: linear-gradient(135deg, #00f2fe 0%, #4facfe 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .hero p {
+            font-size: 18px;
+            color: #94a3b8;
+            max-width: 600px;
+            margin: 0 auto 40px auto;
+        }
+
+        .btn {
+            display: inline-block;
+            background: linear-gradient(135deg, #00f2fe 0%, #4facfe 100%);
+            color: #0b0f19;
+            padding: 12px 30px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(0, 242, 254, 0.3);
+        }
+
+        /* Diensten Sectie */
+        .services {
+            padding: 80px 0;
+            background-color: #0f172a;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 32px;
+            margin-bottom: 50px;
+            color: #fff;
+        }
+
+        .section-title span {
+            color: #00f2fe;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .card {
+            background-color: #1e293b;
+            padding: 40px 30px;
+            border-radius: 8px;
+            border: 1px solid #334155;
+            transition: transform 0.3s, border-color 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            border-color: #00f2fe;
+        }
+
+        .card-icon {
+            font-size: 40px;
+            margin-bottom: 20px;
+        }
+
+        .card h3 {
+            font-size: 22px;
+            margin-bottom: 15px;
+            color: #fff;
+        }
+
+        .card p {
+            color: #94a3b8;
+            font-size: 15px;
+        }
+
+        /* AVG Voordeel Sectie */
+        .avg-section {
+            padding: 80px 0;
+            background: #0b0f19;
+        }
+
+        .avg-box {
+            background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
+            border: 1px solid #334155;
+            border-left: 5px solid #00f2fe;
+            padding: 40px;
+            border-radius: 8px;
+        }
+
+        .avg-box h3 {
+            font-size: 24px;
+            color: #fff;
+            margin-bottom: 15px;
+        }
+
+        /* Contact Sectie */
+        .contact {
+            padding: 80px 0;
+            text-align: center;
+            background-color: #0f172a;
+        }
+
+        .contact p {
+            margin-bottom: 30px;
+            color: #94a3b8;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #0b0f19;
+            padding: 30px 0;
+            text-align: center;
+            border-top: 1px solid #1e293b;
+            color: #64748b;
+            font-size: 14px;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .nav-links { display: none; }
+            .hero h1 { font-size: 36px; }
+            .grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigatiebalk -->
+    <header>
+        <div class="container nav">
+            <a href="#" class="logo">🔒 Cyber<span>Secure</span></a>
+            <ul class="nav-links">
+                <li><a href="#diensten">Diensten</a></li>
+                <li><a href="#avg">AVG Wetgeving</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <!-- Hero Sectie -->
+    <section class="hero">
+        <div class="container">
+            <h1>De Digitale Kluis Voor Jouw Bedrijf</h1>
+            <p>Hackers worden slimmer, maar CyberSecure is ze altijd een stap voor. Wij beschermen jouw MKB-onderneming met onkraakbare beveiliging.</p>
+            <a href="#contact" class="btn">Beveilig Mijn Bedrijf</a>
+        </div>
+    </section>
+
+    <!-- Diensten Sectie -->
+    <section id="diensten" class="services">
+        <div class="container">
+            <h2 class="section-title">Onze <span>Diensten</span></h2>
+            <div class="grid">
+                
+                <!-- Dienst 1 -->
+                <div class="card">
+                    <div class="card-icon">🔑</div>
+                    <h3>End-to-End Encryption</h3>
+                    <p>Al je data en communicatie wordt onleesbaar versleuteld voor buitenstaanders. Alleen de verzender en ontvanger hebben toegang. Volledig waterdicht.</p>
+                </div>
+
+                <!-- Dienst 2 -->
+                <div class="card">
+                    <div class="card-icon">☁️</div>
+                    <h3>Private Cloud Hosting</h3>
+                    <p>Geen onveilige openbare servers meer. Wij bouwen een afgeschermde, eigen cloudomgeving speciaal voor jouw bedrijf en bestanden.</p>
+                </div>
+
+                <!-- Dienst 3 -->
+                <div class="card">
+                    <div class="card-icon">🌐</div>
+                    <h3>Beveiligde Website Hosting</h3>
+                    <p>Bescherm je online visitekaartje tegen DDoS-aanvallen en malware. Wij hosten jouw website op een zwaar beveiligde en continu gemonitorde omgeving.</p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- AVG Sectie -->
+    <section id="avg" class="avg-section">
+        <div class="container">
+            <div class="avg-box">
+                <h3>100% Voldoen aan de AVG/GDPR Privacywetgeving</h3>
+                <p>De Europese privacywet eist dat ondernemers klantgegevens maximaal beveiligen. Datalekken kunnen leiden tot gigantische boetes. Met het totaalpakket van CyberSecure is jouw data-opslag technisch volledig in lijn met de AVG. Wij nemen de security-stress direct bij je weg.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Sectie -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 class="section-title">Klaar Voor <span>Echte Veiligheid</span>?</h2>
+            <p>Laat hackers je bedrijf niet platleggen. Neem vandaag nog contact op voor een vrijblijvend adviesgesprek.</p>
+            <a href="mailto:info@cybersecure.nl" class="btn">E-mail CyberSecure</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 CyberSecure. Alle rechten voorbehouden. Bescherming op maat voor het MKB.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
