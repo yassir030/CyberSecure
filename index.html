@@ -3,23 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CyberSecure | Protecting the Digital Frontier</title>
+    <title>CyberSecure | Advanced MKB Digital Security</title>
     <style>
-        /* CSS Reset & Glossy Basis */
+        /* CSS Reset & Glossy Vibe */
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
             font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            scroll-behavior: smooth;
         }
 
         body {
             background-color: #020813;
-            /* Subtiel circuit/grid patroon voor de tech-vibe */
+            /* High-tech grid patroon */
             background-image: 
-                linear-gradient(rgba(0, 242, 254, 0.03) 1px, transparent 1px),
-                linear-gradient(90deg, rgba(0, 242, 254, 0.03) 1px, transparent 1px);
-            background-size: 30px 30px;
+                linear-gradient(rgba(0, 242, 254, 0.04) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(0, 242, 254, 0.04) 1px, transparent 1px);
+            background-size: 40px 40px;
             color: #f1f5f9;
             line-height: 1.6;
             overflow-x: hidden;
@@ -31,35 +32,84 @@
             margin: 0 auto;
         }
 
-        /* Glossy Navigatiebalk met Glas-effect */
+        /* LOGO ICON (CSS replica van het gloeiende schild uit image_8fa268.png) */
+        .shield-logo-icon {
+            position: relative;
+            width: 32px;
+            height: 36px;
+            background: transparent;
+            border: 2px solid #00f2fe;
+            border-radius: 0 0 16px 16px;
+            clip-path: polygon(0% 0%, 50% 15%, 100% 0%, 100% 50%, 50% 100%, 0% 50%);
+            box-shadow: 0 0 15px rgba(0, 242, 254, 0.8);
+            display: inline-block;
+            margin-right: 12px;
+            animation: pulseGlow 3s infinite alternate;
+        }
+
+        .shield-logo-icon::after {
+            content: '';
+            position: absolute;
+            top: 25%;
+            left: 25%;
+            width: 12px;
+            height: 12px;
+            border: 2px solid #4facfe;
+            border-radius: 3px 3px 0 0;
+            border-bottom: none;
+            background: transparent;
+        }
+
+        .shield-logo-icon::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 25%;
+            width: 12px;
+            height: 8px;
+            background: #4facfe;
+            border-radius: 0 0 2px 2px;
+        }
+
+        @keyframes pulseGlow {
+            0% { filter: drop-shadow(0 0 2px #00f2fe); }
+            100% { filter: drop-shadow(0 0 10px #00f2fe) drop-shadow(0 0 15px #4facfe); }
+        }
+
+        /* Premium Navigatiebalk met Glasmorphism */
         header {
-            background: rgba(2, 8, 19, 0.75);
-            border-bottom: 1px solid rgba(0, 242, 254, 0.2);
+            background: rgba(2, 8, 19, 0.8);
+            border-bottom: 1px solid rgba(0, 242, 254, 0.25);
             position: sticky;
             top: 0;
-            z-index: 100;
-            backdrop-filter: blur(20px);
-            -webkit-backdrop-filter: blur(20px);
-            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
+            z-index: 1000;
+            backdrop-filter: blur(25px);
+            -webkit-backdrop-filter: blur(25px);
+            box-shadow: 0 4px 40px rgba(0, 0, 0, 0.6);
         }
 
         nav {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 20px 0;
+            padding: 15px 0;
         }
 
-        .logo {
+        .brand-container {
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+        }
+
+        .logo-text {
             font-size: 26px;
             font-weight: 800;
             color: #ffffff;
-            text-decoration: none;
-            text-shadow: 0 0 15px rgba(0, 242, 254, 0.6);
             letter-spacing: 0.5px;
+            text-shadow: 0 0 20px rgba(0, 242, 254, 0.5);
         }
 
-        .logo span {
+        .logo-text span {
             background: linear-gradient(135deg, #00f2fe 0%, #4facfe 100%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
@@ -68,13 +118,14 @@
         .nav-links {
             display: flex;
             list-style: none;
-            gap: 30px;
+            gap: 35px;
         }
 
         .nav-links a {
             color: #cbd5e1;
             text-decoration: none;
             font-weight: 500;
+            font-size: 15px;
             transition: all 0.3s ease;
         }
 
@@ -83,120 +134,196 @@
             text-shadow: 0 0 10px rgba(0, 242, 254, 0.8);
         }
 
-        /* Hero Sectie met Grote Neon Gloed */
+        /* Hero Sectie met Extreme Glow */
         .hero {
-            padding: 130px 0 100px 0;
+            padding: 150px 0 120px 0;
             text-align: center;
             position: relative;
         }
 
-        /* De enorme gloeiende cirkel achter de tekst */
         .hero::before {
             content: '';
             position: absolute;
-            top: 10%,;
+            top: 30%;
             left: 50%;
             transform: translate(-50%, -50%);
-            width: 400px;
-            height: 400px;
-            background: radial-gradient(circle, rgba(0, 242, 254, 0.15) 0%, transparent 70%);
+            width: 600px;
+            height: 600px;
+            background: radial-gradient(circle, rgba(0, 242, 254, 0.12) 0%, transparent 65%);
             z-index: -1;
         }
 
         .hero h1 {
-            font-size: 54px;
+            font-size: 62px;
             font-weight: 800;
-            margin-bottom: 10px;
+            margin-bottom: 15px;
             color: #ffffff;
-            letter-spacing: -1px;
+            letter-spacing: -1.5px;
+            line-height: 1.1;
+        }
+
+        .hero h1 span {
+            background: linear-gradient(135deg, #00f2fe 0%, #4facfe 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
         }
 
         .hero .subtitle {
-            font-size: 16px;
+            font-size: 15px;
             color: #00f2fe;
-            font-weight: 700;
+            font-weight: 800;
             text-transform: uppercase;
-            letter-spacing: 4px;
+            letter-spacing: 5px;
             margin-bottom: 25px;
-            text-shadow: 0 0 10px rgba(0, 242, 254, 0.5);
+            text-shadow: 0 0 15px rgba(0, 242, 254, 0.6);
         }
 
         .hero p {
-            font-size: 19px;
+            font-size: 20px;
             color: #94a3b8;
-            max-width: 650px;
-            margin: 0 auto 40px auto;
+            max-width: 750px;
+            margin: 0 auto 45px auto;
         }
 
-        /* Ultra-Glossy Cyber Knop */
+        /* Ultra-Glossy Knoppen */
         .btn {
             display: inline-block;
             background: linear-gradient(135deg, #00f2fe 0%, #4facfe 100%);
             color: #020813;
-            padding: 14px 35px;
-            border-radius: 6px;
+            padding: 16px 40px;
+            border-radius: 8px;
             text-decoration: none;
             font-weight: 700;
+            font-size: 16px;
             letter-spacing: 0.5px;
-            box-shadow: 0 0 20px rgba(0, 242, 254, 0.4);
-            transition: all 0.3s ease;
+            box-shadow: 0 0 25px rgba(0, 242, 254, 0.45);
+            transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
         }
 
         .btn:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 0 35px rgba(0, 242, 254, 0.8);
+            transform: translateY(-4px);
+            box-shadow: 0 0 40px rgba(0, 242, 254, 0.9);
         }
 
-        /* Diensten Sectie met Glazen Kaarten */
-        .services {
-            padding: 100px 0;
-            position: relative;
+        .btn-secondary {
+            background: transparent;
+            color: #ffffff;
+            border: 1px solid rgba(0, 242, 254, 0.4);
+            margin-left: 15px;
+            box-shadow: none;
+        }
+
+        .btn-secondary:hover {
+            background: rgba(0, 242, 254, 0.1);
+            border-color: #00f2fe;
+            box-shadow: 0 0 20px rgba(0, 242, 254, 0.3);
+        }
+
+        /* Sectie Algemene Styles */
+        section {
+            padding: 120px 0;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.03);
         }
 
         .section-title {
             text-align: center;
-            font-size: 36px;
+            font-size: 40px;
             font-weight: 800;
-            margin-bottom: 60px;
+            margin-bottom: 15px;
             color: #fff;
         }
 
         .section-title span {
-            color: #00f2fe;
-            text-shadow: 0 0 15px rgba(0, 242, 254, 0.4);
+            background: linear-gradient(135deg, #00f2fe 0%, #4facfe 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
         }
 
+        .section-desc {
+            text-align: center;
+            color: #94a3b8;
+            max-width: 600px;
+            margin: 0 auto 70px auto;
+            font-size: 17px;
+        }
+
+        /* Statistieken / Feature balk */
+        .stats-bar {
+            background: rgba(15, 23, 42, 0.5);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(0, 242, 254, 0.15);
+            border-radius: 16px;
+            padding: 40px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 30px;
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .stat-item h2 {
+            font-size: 36px;
+            color: #00f2fe;
+            font-weight: 800;
+            text-shadow: 0 0 10px rgba(0, 242, 254, 0.4);
+        }
+
+        .stat-item p {
+            color: #cbd5e1;
+            font-size: 14px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-top: 5px;
+        }
+
+        /* GRID EN ARTIKELEN (Diensten) */
         .grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-            gap: 30px;
+            grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+            gap: 35px;
         }
 
-        /* Glassmorphism Cards */
         .card {
-            background: rgba(30, 41, 59, 0.4);
-            backdrop-filter: blur(10px);
-            -webkit-backdrop-filter: blur(10px);
-            padding: 45px 35px;
-            border-radius: 12px;
-            border: 1px solid rgba(0, 242, 254, 0.15);
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+            background: rgba(30, 41, 59, 0.35);
+            backdrop-filter: blur(15px);
+            -webkit-backdrop-filter: blur(15px);
+            padding: 50px 40px;
+            border-radius: 14px;
+            border: 1px solid rgba(0, 242, 254, 0.12);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
             transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, rgba(0, 242, 254, 0.1) 0%, transparent 100%);
+            opacity: 0;
+            transition: opacity 0.4s ease;
+        }
+
+        .card:hover::before {
+            opacity: 1;
         }
 
         .card:hover {
-            transform: translateY(-8px);
-            border-color: rgba(0, 242, 254, 0.6);
-            box-shadow: 0 15px 40px rgba(0, 242, 254, 0.25);
-            background: rgba(30, 41, 59, 0.6);
+            transform: translateY(-10px);
+            border-color: rgba(0, 242, 254, 0.7);
+            box-shadow: 0 20px 50px rgba(0, 242, 254, 0.3);
+            background: rgba(30, 41, 59, 0.55);
         }
 
         .card-icon {
-            font-size: 45px;
+            font-size: 48px;
             margin-bottom: 25px;
             display: inline-block;
-            /* Geeft de icoontjes ook een gloed */
-            filter: drop-shadow(0 0 10px rgba(0, 242, 254, 0.6));
+            filter: drop-shadow(0 0 12px rgba(0, 242, 254, 0.7));
         }
 
         .card h3 {
@@ -212,133 +339,283 @@
             line-height: 1.7;
         }
 
-        /* Wetgeving / AVG Box */
-        .avg-section {
-            padding: 60px 0;
+        /* NIEUW: Info Matrix Sectie (Waarom CyberSecure?) */
+        .info-matrix {
+            background: radial-gradient(circle at 80% 20%, rgba(79, 172, 254, 0.05) 0%, transparent 50%);
         }
 
-        .avg-box {
-            background: linear-gradient(135deg, rgba(15, 23, 42, 0.6) 0%, rgba(30, 41, 59, 0.4) 100%);
-            backdrop-filter: blur(10px);
-            border: 1px solid rgba(0, 242, 254, 0.2);
-            border-left: 6px solid #00f2fe;
-            padding: 45px;
+        .matrix-box {
+            display: flex;
+            align-items: center;
+            gap: 60px;
+            margin-top: 40px;
+        }
+
+        .matrix-text {
+            flex: 1;
+        }
+
+        .matrix-text h3 {
+            font-size: 28px;
+            color: #fff;
+            margin-bottom: 20px;
+            font-weight: 700;
+        }
+
+        .matrix-list {
+            list-style: none;
+        }
+
+        .matrix-list li {
+            position: relative;
+            padding-left: 35px;
+            margin-bottom: 20px;
+            font-size: 16px;
+            color: #cbd5e1;
+        }
+
+        .matrix-list li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            top: 0;
+            color: #00f2fe;
+            font-weight: bold;
+            font-size: 18px;
+            text-shadow: 0 0 8px rgba(0, 242, 254, 0.8);
+        }
+
+        /* NIEUW: Glossy Cyber Dashboard Preview (Grafisch Element) */
+        .matrix-visual {
+            flex: 1;
+            background: rgba(15, 23, 42, 0.6);
+            border: 1px solid rgba(0, 242, 254, 0.3);
             border-radius: 12px;
-            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
+            padding: 30px;
+            box-shadow: 0 20px 45px rgba(0, 0, 0, 0.6), inset 0 0 20px rgba(0, 242, 254, 0.1);
+            backdrop-filter: blur(10px);
+        }
+
+        .dash-line {
+            height: 8px;
+            background: rgba(255, 255, 255, 0.05);
+            margin-bottom: 15px;
+            border-radius: 4px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .dash-line::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            height: 100%;
+            width: 70%;
+            background: linear-gradient(90deg, #4facfe, #00f2fe);
+            box-shadow: 0 0 10px #00f2fe;
+        }
+
+        .dash-line.short::after { width: 40%; background: #4facfe; }
+        .dash-line.long::after { width: 90%; }
+
+        /* Wetgeving / AVG Compliance Box met Extreme Glow */
+        .avg-box {
+            background: linear-gradient(135deg, rgba(15, 23, 42, 0.7) 0%, rgba(30, 41, 59, 0.4) 100%);
+            backdrop-filter: blur(15px);
+            border: 1px solid rgba(0, 242, 254, 0.25);
+            border-left: 6px solid #00f2fe;
+            padding: 50px;
+            border-radius: 14px;
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
         }
 
         .avg-box h3 {
-            font-size: 26px;
+            font-size: 28px;
             color: #fff;
-            margin-bottom: 15px;
+            margin-bottom: 20px;
             font-weight: 700;
         }
 
         .avg-box p {
             color: #cbd5e1;
             font-size: 16px;
+            margin-bottom: 20px;
         }
 
-        /* Contact / Call to Action */
+        /* Contact & CTA Section */
         .contact {
-            padding: 100px 0;
             text-align: center;
-            background: radial-gradient(circle at bottom, #07152e 0%, #020813 60%);
-            border-top: 1px solid rgba(0, 242, 254, 0.1);
+            background: radial-gradient(circle at bottom, #091a3a 0%, #020813 70%);
+            border-top: 1px solid rgba(0, 242, 254, 0.15);
         }
 
         .contact p {
-            margin-bottom: 35px;
+            margin-bottom: 40px;
             color: #94a3b8;
-            font-size: 18px;
+            font-size: 19px;
         }
 
         /* Footer */
         footer {
             background-color: #01040a;
-            padding: 35px 0;
+            padding: 40px 0;
             text-align: center;
-            border-top: 1px solid rgba(30, 41, 59, 0.7);
+            border-top: 1px solid rgba(30, 41, 59, 0.8);
             color: #475569;
             font-size: 14px;
             letter-spacing: 0.5px;
         }
 
-        /* Mobiel Vriendelijk */
+        /* Mobiele Optimalisatie */
+        @media (max-width: 968px) {
+            .matrix-box { flex-direction: column; gap: 40px; }
+            .hero h1 { font-size: 44px; }
+        }
+
         @media (max-width: 768px) {
             .nav-links { display: none; }
-            .hero h1 { font-size: 38px; }
-            .hero p { font-size: 16px; }
+            .hero { padding: 100px 0 80px 0; }
             .grid { grid-template-columns: 1fr; }
+            .btn { width: 100%; margin-bottom: 15px; }
+            .btn-secondary { margin-left: 0; }
         }
     </style>
 </head>
 <body>
 
+    <!-- Navigatiebalk met verwerkt Schild-Logo -->
     <header>
         <div class="container nav">
-            <a href="#" class="logo">Cyber<span>Secure</span></a>
+            <a href="#" class="brand-container">
+                <!-- Het glanzende cyber-schild logo uit image_8fa268.png -->
+                <div class="shield-logo-icon"></div>
+                <div class="logo-text">Cyber<span>Secure</span></div>
+            </a>
             <ul class="nav-links">
                 <li><a href="#diensten">Diensten</a></li>
-                <li><a href="#avg">AVG/GDPR Compliance</a></li>
+                <li><a href="#waarom">Infrastructuur</a></li>
+                <li><a href="#avg">AVG/GDPR</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
         </div>
     </header>
 
+    <!-- Hero Sectie -->
     <section class="hero">
         <div class="container">
             <div class="subtitle">Protecting the Digital Frontier</div>
-            <h1>CyberSecure</h1>
-            <p>De digitale kluis voor het MKB. Wij leveren een totaalpakket aan end-to-end security, private cloud en secure hosting dat vanaf de basis volledig is dichtgetimmerd.</p>
-            <a href="#contact" class="btn">Start Beveiliging</a>
+            <h1>Volledig Gecentraliseerde <br><span>Cyberbeveiliging</span> voor het MKB</h1>
+            <p>Geen losse virusscanners of kwetsbare cloud-oplossingen. Wij leveren een high-end totaalpakket aan end-to-end security, private cloud en secure hosting dat vanaf de basis is dichtgetimmerd.</p>
+            <a href="#contact" class="btn">Start Nu Gratis Demo</a>
+            <a href="#diensten" class="btn btn-secondary">Ontdek Onze Pijlers</a>
         </div>
     </section>
 
-    <section id="diensten" class="services">
+    <!-- Live Statistieken Dashboard Effect -->
+    <div class="container">
+        <div class="stats-bar">
+            <div class="stat-item">
+                <h2>100%</h2>
+                <p>Data Isolatie</p>
+            </div>
+            <div class="stat-item">
+                <h2>99.99%</h2>
+                <p>Uptime Garantie</p>
+            </div>
+            <div class="stat-item">
+                <h2>0%</h2>
+                <p>Achterdeurtjes (No-Backdoor)</p>
+            </div>
+            <div class="stat-item">
+                <h2>AES-256</h2>
+                <p>Militaire Encryptie</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Uitgebreide Diensten Sectie -->
+    <section id="diensten">
         <div class="container">
             <h2 class="section-title">Onze <span>Cyber Pijlers</span></h2>
+            <p class="section-desc">Drie kerntechnologieën gecombineerd in één krachtig, onkraakbaar schild voor al uw bedrijfsdata.</p>
+            
             <div class="grid">
-                
+                <!-- Dienst 1 -->
                 <div class="card">
                     <div class="card-icon">🔑</div>
                     <h3>End-to-End Encryption</h3>
-                    <p>Volledige versleuteling van data vóór verzending. Bestanden worden pas bij de rechtmatige ontvanger ontsleuteld. Zelfs als hostingprovider hebben wij géén achterdeurtjes om mee te kijken.</p>
+                    <p>Volledige cryptografische versleuteling van data vóór verzending. Bestanden worden pas bij de rechtmatige ontvanger ontsleuteld via unieke sleutels. Zelfs als hostingprovider hebben wij géén achterdeurtjes om mee te kijken. Uw geheimen blijven uw geheimen.</p>
                 </div>
 
+                <!-- Dienst 2 -->
                 <div class="card">
                     <div class="card-icon">☁️</div>
                     <h3>Private Cloud Hosting</h3>
-                    <p>Geen risico's meer met gedeelde hardware van honderden vreemde partijen. Wij bieden een volledig onafhankelijke, geïsoleerde server-omgeving met maximale prestaties en absolute isolatie.</p>
+                    <p>Geen risico's meer met gedeelde publieke servers van grote tech-giganten waar honderden vreemde partijen op draaien. Wij bieden een volledig onafhankelijke, fysiek geïsoleerde server-omgeving met maximale dedicated prestaties en absolute data-isolatie.</p>
                 </div>
 
+                <!-- Dienst 3 -->
                 <div class="card">
                     <div class="card-icon">🛡️</div>
                     <h3>Secure Webhosting</h3>
-                    <p>Uw online visitekaartje immuun voor cyberaanvallen. Uitgerust met een live Web Application Firewall (WAF), geavanceerde anti-DDoS mitigatie voor 99.99% uptime, en uurlijkse real-time back-ups.</p>
+                    <p>Uw online applicaties en website volledig immuun voor cyberaanvallen. Uitgerust met een live AI-gestuurde Web Application Firewall (WAF), geavanceerde anti-DDoS mitigatie om gigantische netwerkaanvallen af te slaan, en uurlijkse real-time back-ups.</p>
                 </div>
-
             </div>
         </div>
     </section>
 
-    <section id="avg" class="avg-section">
+    <!-- NIEUW: Uitgebreide Info Matrix Sectie -->
+    <section id="waarom" class="info-matrix">
+        <div class="container">
+            <h2 class="section-title">MKB <span>Infrastructuur</span> naar het Hoogste Niveau</h2>
+            <p class="section-desc">Waarom traditionele security tekortschiet en CyberSecure de standaard herdefinieert.</p>
+            
+            <div class="matrix-box">
+                <div class="matrix-text">
+                    <h3>Militaire beveiliging, vertaald naar simpel beheer</h3>
+                    <p style="color: #94a3b8; margin-bottom: 20px;">Veel bedrijven denken dat een simpele firewall genoeg is, totdat het te laat is. CyberSecure biedt proactieve monitoring en geavanceerde netwerkanalyses om dreigingen te elimineren voordat ze schade aanrichten.</p>
+                    <ul class="matrix-list">
+                        <li><strong>Volledige zero-trust architectuur:</strong> Niemand krijgt zomaar toegang zonder strikte cryptografische verificatie.</li>
+                        <li><strong>Geïsoleerde netwerksegmenten:</strong> Mocht een lokaal apparaat besmet raken, kan de infectie zich nooit verspreiden naar de cloud.</li>
+                        <li><strong>Managed updates & patches:</strong> Wij updaten uw systemen continu op de achtergrond tegen de allernieuwste zero-day exploits.</li>
+                    </ul>
+                </div>
+                
+                <!-- Visueel Glossy Dashboard element -->
+                <div class="matrix-visual">
+                    <p style="font-family: monospace; color: #00f2fe; margin-bottom: 15px; font-size: 14px;">[SYSTEM_STATUS: SECURE]</p>
+                    <div class="dash-line long"></div>
+                    <div class="dash-line short"></div>
+                    <div class="dash-line"></div>
+                    <p style="font-size: 13px; color: #475569; font-family: monospace; margin-top: 20px;">Threat Mitigation Flow: Active <br>Network Firewall Status: 100% Operational</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- AVG Sectie -->
+    <section id="avg">
         <div class="container">
             <div class="avg-box">
-                <h3>Direct Voldoen aan de Strengste Privacywetgeving</h3>
-                <p>Datalekken kunnen MKB-ondernemers duizenden euro's aan boetes kosten. Dankzij de end-to-end beveiliging en private infrastructuur van CyberSecure voldoet uw data-opslag technisch direct 100% aan de eisen van de AVG/GDPR. Wij nemen de security-stress volledig van u over.</p>
+                <h3>Direct Voldoen aan de Strengste Privacywetgeving (AVG/GDPR)</h3>
+                <p>Datalekken en ransomware-aanvallen kunnen MKB-ondernemers duizenden euro's aan boetes en herstelkosten kosten. Dankzij de end-to-end beveiliging en soevereine private infrastructuur van CyberSecure voldoet uw data-opslag technisch direct 100% aan de strenge eisen van de wetgeving. Wij nemen de security-stress en juridische risico's volledig van u over.</p>
+                <p style="font-weight: 700; color: #00f2fe;">✓ Inclusief officieel CyberSecure Certificaat voor uw klanten en stakeholders.</p>
             </div>
         </div>
     </section>
 
+    <!-- Contact Sectie met het e-mailadres -->
     <section id="contact" class="contact">
         <div class="container">
             <h2 class="section-title">Maak Uw Bedrijf <span>Onkraakbaar</span></h2>
-            <p>Wacht niet tot hackers toeslaan. Neem vandaag nog contact met ons op voor een waterdicht digitaal fundament.</p>
-            <a href="mailto:110792@student.grcu.nl" class="btn">Contact CyberSecure</a>
+            <p>Wacht niet tot kwaadwillenden toeslaan en gijzelsoftware uw bedrijf platlegt. Neem vandaag nog contact met ons op voor een waterdicht digitaal fundament.</p>
+            <!-- Het professionele e-mailadres gelinkt in de knop -->
+            <a href="mailto:contact@cybersecure.com" class="btn">Mail Ons: contact@cybersecure.com</a>
         </div>
     </section>
 
+    <!-- Footer -->
     <footer>
         <div class="container">
             <p>&copy; 2026 CyberSecure. End-to-End Security &bull; Private Cloud &bull; Secure Hosting.</p>
